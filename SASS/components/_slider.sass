@@ -4,7 +4,10 @@
 .swiper 
   width: 100%
   cursor: grab
+  overflow: hidden
   margin: 1rem 0
+  &-wrapper
+    backface-visibility: hidden
   &-button-next,
   &-button-prev
     position: absolute
@@ -20,7 +23,7 @@
     @include respond(phone)
       display: none  !important
     @include respond(tab-port)
-      padding: 4rem
+      padding: 4.5rem
 
   &-slide 
     width: auto !important
