@@ -1,10 +1,13 @@
 const doctorsSwiper = new Swiper('.swiper', {
   loop: true,
-  slidesPerView: 'auto',
-  centeredSlides: true,
+  // slidesPerView: 'auto',
+  slidesPerView: 1,
+  centeredSlides: false,
   freeMode: true,
   grabCursor: true,
-
+  lazy: {
+    loadPrevNext: true,
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -13,15 +16,15 @@ const doctorsSwiper = new Swiper('.swiper', {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      spaceBetween: 10,
+      // spaceBetween: 10,
     },
     768: {
       slidesPerView: 4,
-      spaceBetween: 20,
+      // spaceBetween: 20,
     },
     1200: {
       slidesPerView: 5,
-      spaceBetween: 30,
+      // spaceBetween: 30,
     },
   },
 });
