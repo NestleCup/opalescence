@@ -1,0 +1,372 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 1300px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 45%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #fffffd;
+}
+
+.wrapper {
+  max-width: 120rem;
+  margin: 0 auto;
+  background: #fffffd;
+  min-height: 100vh;
+  padding: 0 2rem;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 1.5rem;
+  }
+}
+
+body {
+  font: 400 1.7rem Commissioner, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.4;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #000;
+}
+
+.title__h2 {
+  font-size: 2.7rem;
+  font-weight: 600;
+  margin: 0 0 2rem;
+}
+
+.title__h3 {
+  font-size: 2.1rem;
+  color: #000;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.accent__title {
+  font-size: 3.4rem;
+  color: #000;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.date-text {
+  font-weight: 400;
+  color: #717880;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.margin-bottom-40px {
+  margin-bottom: 4rem;
+}
+
+.button {
+  outline: none;
+}
+.button--action {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  height: 5.1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 2rem;
+  border: none;
+  background: #0051D4;
+  color: #fffffd;
+  width: 100%;
+}
+.button--action:hover {
+  background: #0866ff;
+}
+.button--action:active {
+  transform: scale(0.95);
+}
+
+.form {
+  margin: 4rem 0;
+}
+.form__input {
+  outline: none;
+  width: 100%;
+  display: block;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  color: #000;
+  padding: 2rem 0 2rem 2rem;
+  background-color: #fffffd;
+  border: 1px solid #717880;
+  border-radius: 0.5rem;
+  margin: 0 0 2rem;
+}
+.form__input:focus {
+  border-bottom: 0.3rem solid #66D763;
+}
+.form__input:focus:invalid {
+  border-bottom: 0.3rem solid #D76363;
+}
+.form__description {
+  margin-bottom: 3rem;
+}
+.form-name-error, .form-tel-error {
+  display: none;
+  color: red;
+  font-size: 1.5rem;
+}
+
+.error {
+  border: 0.1rem red solid;
+}
+
+form:valid > .form__group > input {
+  border: 0.1rem solid #4AD45D;
+}
+
+.swiper {
+  width: 100%;
+  cursor: grab;
+  margin: 1rem 0;
+}
+.swiper-button-next, .swiper-button-prev {
+  position: absolute;
+  padding: 3rem;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  transform: scale(1.1);
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+@media only screen and (max-width: 600px) {
+  .swiper-button-next, .swiper-button-prev {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .swiper-button-next, .swiper-button-prev {
+    padding: 4rem;
+  }
+}
+.swiper-slide {
+  width: auto !important;
+  height: auto;
+}
+
+.promo__container {
+  display: flex;
+}
+@media only screen and (max-width: 600px) {
+  .promo__container {
+    display: block;
+  }
+}
+.promo__content {
+  width: 95%;
+  margin-right: 4rem;
+}
+@media only screen and (max-width: 600px) {
+  .promo__content {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+.promo__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.promo__details {
+  display: flex;
+  background-color: #fffffd;
+  box-shadow: inset 0 0 0 1px #E0E3E8;
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 100%;
+}
+.promo__text > * {
+  padding: 1.5rem 2.5rem;
+}
+.promo__price--bold {
+  font-weight: 700;
+}
+.promo__highlight {
+  margin-top: 2rem;
+  position: relative;
+  color: #000;
+  background-color: #EDEFF2;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.promo__highlight::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 5rem solid transparent;
+  border-bottom: 5rem solid transparent;
+  border-left: 4rem solid #EDEFF2;
+  right: -5.5rem;
+  transform: translateY(-80%);
+}
+@media only screen and (max-width: 600px) {
+  .promo__highlight::after {
+    display: none;
+  }
+}
+
+.advantages {
+  clear: left;
+}
+.advantages__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+.advantages__li {
+  padding: 0 0 1.5rem;
+  position: relative;
+  padding-left: 2.8rem;
+}
+.advantages__li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 0.4rem;
+  background: #0051D4;
+  border-radius: 50%;
+}
+.advantages__li::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 25%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  background-color: #f5f5f5;
+  border-radius: 1rem;
+  z-index: 0;
+}
+
+.prise__li {
+  margin-top: 2rem;
+  width: 100%;
+  position: relative;
+  color: #000;
+  background-color: #EDEFF2;
+  padding: 3rem;
+  border-radius: 0.5rem;
+}
+
+.doctor__card {
+  width: 31.5rem !important;
+  height: 38rem !important;
+  border-radius: 0.8rem;
+  margin-right: 3rem;
+}
+.doctor__img img {
+  width: 100%;
+  height: 23rem;
+  margin-bottom: 1.5rem;
+  border-radius: 1.2rem;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+.doctor__img img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.055);
+}
+.doctor__name {
+  margin-bottom: 0.5rem;
+  font-size: 2.1rem;
+}
+.doctor__position {
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.benefits .benefit-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.benefits .benefit-card__icon {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 2rem;
+  filter: invert(21%) sepia(96%) saturate(1810%) hue-rotate(205deg) brightness(103%) contrast(116%);
+}
+.benefits__list {
+  padding: 0;
+}
+
+.reviews__item {
+  background: #EDEFF2;
+  padding: 3rem 3.5rem 4rem;
+  margin: 0 0 3rem;
+  border: 0.1rem solid #E0E3E8;
+  border-radius: 2rem;
+  transition: all 0.3s;
+}
+.reviews__item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.reviews__item-title {
+  margin: 0 0.5rem 0 0;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+.reviews__item-header {
+  display: flex;
+  align-items: center;
+}
+.reviews__item-text {
+  margin-top: 3rem;
+}/*# sourceMappingURL=style.css.map */

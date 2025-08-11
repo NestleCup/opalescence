@@ -1,0 +1,152 @@
+@use "../abstractions/variables.sass" as *
+@use "../abstractions/mixins.sass"  as *
+
+.promo
+  &__container
+    display: flex
+    @include respond(phone)
+      display: block
+  &__content
+    width: 95%
+    margin-right: 4rem
+    @include respond(phone)
+      margin-right: 0
+      width: 100%
+
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__details
+    display: flex
+    background-color: $color-white
+    box-shadow: $min-box-shadow
+    border-radius: 2rem
+    overflow: hidden
+    width: 100%
+  &__text > *
+    padding: 1.5rem 2.5rem
+  &__price--bold
+    font-weight: 700
+  &__highlight
+    margin-top: 2rem
+    position: relative
+    color: $color-black
+    background-color: $color-light-grey
+    padding: 2rem
+    border-radius: .5rem
+    &::after
+      content: ""
+      position: absolute
+      width: 0
+      height: 0
+      border-top: 5rem solid transparent
+      border-bottom: 5rem solid transparent
+      border-left: 4rem solid $color-light-grey
+      right: -5.5rem 
+      transform: translateY(-80%)
+      @include respond(phone)
+        display: none
+
+.advantages
+  clear: left
+  &__list
+    list-style: none
+    display: flex
+    justify-content: space-between 
+  &__li
+    padding: 0 0 1.5rem
+    position: relative
+    padding-left: 2.8rem
+    &::after 
+      content: ''
+      position: absolute
+      left: 0
+      top: 20%
+      width: .4rem
+      height: .4rem
+      border-radius: .4rem
+      background: $color-primary
+      border-radius: 50%
+    &::before 
+      content: ""
+      position: absolute
+      left: -1.5rem
+      top: 25%
+      transform: translateY(-50%)
+      width: 3rem
+      height: 3rem
+      background-color: #f5f5f5
+      border-radius: 1rem
+      z-index: 0
+    
+.prise
+  &__li
+    margin-top: 2rem
+    width: 100%
+    position: relative
+    color: $color-black
+    background-color: $color-light-grey
+    padding: 3rem
+    border-radius: .5rem
+
+.doctor 
+  &__card 
+    width: 31.5rem !important
+    height: 38rem !important/* Увеличил высоту для текста */
+    border-radius: .8rem
+    margin-right: 3rem
+  
+  &__img img 
+    width: 100%
+    height: 23rem
+    margin-bottom: 1.5rem
+    border-radius: 1.2rem
+    object-fit: cover
+    object-position:  center 
+    transition: transform 0.3s ease
+    &:hover 
+      transform: scale(1.03)
+      box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.055)
+  &__name 
+    margin-bottom: 0.5rem
+    font-size: 2.1rem
+  &__position 
+    font-size: 1.5rem
+    color: $color-black
+    font-weight: 400
+    line-height: 1.2
+
+.benefits
+  .benefit-card
+    display: flex
+    align-items: center
+    margin-bottom: 1.5rem
+    &__icon
+      width: 5rem
+      height: 5rem
+      margin-right: 2rem
+      filter: invert(21%) sepia(96%) saturate(1810%) hue-rotate(205deg) brightness(103%) contrast(116%)
+  &__list
+    padding: 0
+.reviews
+
+  &__item
+    background: $color-light-grey
+    padding: 3rem 3.5rem 4rem
+    margin: 0 0 3rem
+    border: .1rem solid #E0E3E8
+    border-radius: 2rem 
+    transition: all .3s
+    &:hover
+      box-shadow: $max-box-shadow
+    &-title
+      margin: 0 .5rem 0 0
+      font-size: 1.9rem
+      line-height: 1.2
+      font-weight: 600
+    &-header
+      display: flex
+      align-items: center
+    &-text
+      margin-top: 3rem

@@ -1,0 +1,33 @@
+@use "../abstractions/variables.sass" as *
+
+.form
+  margin: 4rem 0
+  &__input
+    outline: none
+    width: 100%
+    display: block
+    font-size: 1.6rem
+    letter-spacing: .2rem
+    color: $color-black
+    padding: 2rem 0 2rem 2rem
+    background-color: $color-white
+    border: 1px solid #717880
+    border-radius: .5rem
+    margin: 0 0 2rem
+    &:focus
+      border-bottom: .3rem solid #66D763
+    &:focus:invalid
+      border-bottom: .3rem solid #D76363
+  &__description
+    margin-bottom: 3rem 
+  &-name-error,
+  &-tel-error
+    display: none
+    color: red
+    font-size: 1.5rem
+.error
+  border: .1rem red solid
+
+
+form:valid > .form__group > input
+  border: .1rem solid $color-success

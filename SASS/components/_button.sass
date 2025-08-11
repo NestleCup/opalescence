@@ -1,0 +1,20 @@
+@use "../abstractions/variables.sass" as *
+.button
+  outline: none
+  &--action
+    cursor: pointer
+    padding:1rem 2rem
+    height: 5.1rem
+    border-radius: .5rem
+    transition: all .3s
+    position: relative
+    font-size: 2rem
+    border: none
+    background: $color-primary
+    color: $color-white
+    width: 100%
+    
+    &:hover
+      background: #0866ff
+    &:active
+      transform: scale(0.95)
