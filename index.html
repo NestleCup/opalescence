@@ -43,9 +43,9 @@
       <main>
         <section class="promo margin-bottom-40px">
           <div class="promo__container container">
-            <div class="promo__content">
-              <h2 class="promo__badge title__h2">Акция</h2>
+            <h2 class="promo__badge title__h2">Акция</h2>
 
+            <div class="promo__content">
               <div class="promo__details">
                 <div class="promo__image-wrapper">
                   <img
@@ -66,51 +66,53 @@
                   </span>
                 </div>
               </div>
-              <div class="promo__highlight">
-                <p>Сделайте свою улыбку неотразимой и привлекательной</p>
+              <div class="promo__action">
+                <form class="form promo__form" id="application-form">
+                  <p class="form__header title__h2">Участвовать в акции</p>
+
+                  <p class="form__description paragraph">
+                    Для того чтобы принять участие в акции позвоните нам:
+                    <strong>(812) 123-45-67</strong>
+                    или оставьте ваш телефон:
+                  </p>
+
+                  <div class="form__group">
+                    <span class="form-name-error">
+                      Поле не может быть пустым
+                    </span>
+                    <input
+                      type="text"
+                      id="name"
+                      class="form__input"
+                      placeholder=" Имя Фамилия*"
+                      required
+                    />
+                  </div>
+
+                  <div class="form__group">
+                    <span class="form-tel-error">
+                      Введите корректный номер телефона
+                    </span>
+                    <input
+                      type="tel"
+                      id="phone"
+                      class="form__input"
+                      placeholder=" Контактный телефон*"
+                      required
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="form__submit button button--action"
+                  >
+                    Отправить заявку
+                  </button>
+                </form>
               </div>
             </div>
-            <div class="promo__action">
-              <form class="form promo__form" id="application-form">
-                <p class="form__header title__h2">Участвовать в акции</p>
-
-                <p class="form__description paragraph">
-                  Для того чтобы принять участие в акции позвоните нам:
-                  <strong>(812) 123-45-67</strong>
-                  или оставьте ваш телефон:
-                </p>
-
-                <div class="form__group">
-                  <span class="form-name-error">Поле не может быть пустым</span>
-                  <input
-                    type="text"
-                    id="name"
-                    class="form__input"
-                    placeholder=" Имя Фамилия*"
-                    required
-                  />
-                </div>
-
-                <div class="form__group">
-                  <span class="form-tel-error">
-                    Введите корректный номер телефона
-                  </span>
-                  <input
-                    type="tel"
-                    id="phone"
-                    class="form__input"
-                    placeholder=" Контактный телефон*"
-                    required
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  class="form__submit button button--action"
-                >
-                  Отправить заявку
-                </button>
-              </form>
+            <div class="promo__highlight">
+              <p>Сделайте свою улыбку неотразимой и привлекательной</p>
             </div>
           </div>
         </section>
@@ -120,22 +122,18 @@
               Преимущества Opalescence:
             </h2>
             <ul class="advantages__list">
-              <div class="advantages__list-flex">
-                <li class="advantages__li">Безопасность.</li>
-                <li class="advantages__li">
-                  Нейтральный рН геля не изменяет структуру зуба.
-                </li>
-                <li class="advantages__li">
-                  Вода в составе геля не допускает обезвоживания зуба.
-                </li>
-              </div>
-              <div class="advantages__list-flex">
-                <li class="advantages__li">Защита десен</li>
-                <li class="advantages__li">
-                  Содержание фторидов уменьшает риск возникновения кариеса.
-                </li>
-                <li class="advantages__li">Быстрый и стойкий результат.</li>
-              </div>
+              <li class="advantages__li">Безопасность.</li>
+              <li class="advantages__li">
+                Нейтральный рН геля не изменяет структуру зуба.
+              </li>
+              <li class="advantages__li">
+                Вода в составе геля не допускает обезвоживания зуба.
+              </li>
+              <li class="advantages__li">Защита десен</li>
+              <li class="advantages__li">
+                Содержание фторидов уменьшает риск возникновения кариеса.
+              </li>
+              <li class="advantages__li">Быстрый и стойкий результат.</li>
             </ul>
           </div>
         </section>

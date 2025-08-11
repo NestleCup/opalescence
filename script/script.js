@@ -28,11 +28,9 @@ const doctorsSwiper = new Swiper('.swiper', {
     },
     768: {
       slidesPerView: 4,
-      // spaceBetween: 20,
     },
     1200: {
       slidesPerView: 5,
-      // spaceBetween: 30,
     },
   },
 });

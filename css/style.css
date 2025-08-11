@@ -35,6 +35,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -71,12 +75,13 @@ body {
   font-size: 2.7rem;
   font-weight: 600;
   margin: 0 0 2rem;
+  line-height: 1.25;
 }
 
 .title__h3 {
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   color: #000;
-  line-height: 1.3;
+  line-height: 1.25;
   font-weight: 600;
 }
 
@@ -85,6 +90,7 @@ body {
   color: #000;
   line-height: 1.2;
   font-weight: 600;
+  margin-bottom: 3rem;
 }
 
 .date-text {
@@ -121,9 +127,6 @@ body {
   transform: scale(0.95);
 }
 
-.form {
-  margin: 4rem 0;
-}
 .form__input {
   outline: none;
   width: 100%;
@@ -163,15 +166,10 @@ form:valid > .form__group > input {
 .swiper {
   width: 100%;
   cursor: grab;
-  overflow: hidden;
   margin: 1rem 0;
 }
-.swiper-wrapper {
-  backface-visibility: hidden;
-}
 .swiper-button-next, .swiper-button-prev {
-  position: absolute;
-  padding: 3rem;
+  padding: 3.5rem;
   background: white;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -193,26 +191,21 @@ form:valid > .form__group > input {
 }
 .swiper-slide {
   width: auto !important;
-  height: auto;
 }
 
-.promo__container {
-  display: flex;
-}
-@media only screen and (max-width: 600px) {
-  .promo__container {
-    display: block;
-  }
-}
 .promo__content {
-  width: 95%;
-  margin-right: 4rem;
+  display: flex;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 600px) {
   .promo__content {
-    margin-right: 0;
     width: 100%;
+    display: block;
   }
+}
+.promo__text {
+  width: 65%;
+  padding: 1.5rem 2.5rem;
 }
 .promo__image {
   width: 100%;
@@ -225,10 +218,18 @@ form:valid > .form__group > input {
   box-shadow: inset 0 0 0 1px #E0E3E8;
   border-radius: 2rem;
   overflow: hidden;
+  margin-right: 3rem;
   width: 100%;
 }
-.promo__text > * {
-  padding: 1.5rem 2.5rem;
+@media only screen and (max-width: 600px) {
+  .promo__details {
+    margin-bottom: 4rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .promo__details__form {
+    margin: 5rem;
+  }
 }
 .promo__price--bold {
   font-weight: 700;
@@ -240,36 +241,39 @@ form:valid > .form__group > input {
   background-color: #EDEFF2;
   padding: 2rem;
   border-radius: 0.5rem;
+  transition: 0.3s;
 }
 .promo__highlight::after {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 5rem solid transparent;
-  border-bottom: 5rem solid transparent;
-  border-left: 4rem solid #EDEFF2;
-  right: -5.5rem;
-  transform: translateY(-80%);
+  border-top: 3.5rem solid transparent;
+  border-bottom: 3.5rem solid transparent;
+  border-left: 3rem solid #EDEFF2;
+  right: -4rem;
+  transform: translateY(-68%);
 }
 @media only screen and (max-width: 600px) {
   .promo__highlight::after {
     display: none;
   }
 }
-
-.advantages {
-  clear: left;
+.promo__highlight:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
 .advantages__list {
   list-style: none;
-  display: flex;
-  justify-content: space-between;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 .advantages__li {
-  padding: 0 0 1.5rem;
+  padding: 0 0 1.5rem 2.8rem;
+  width: 100%;
   position: relative;
-  padding-left: 2.8rem;
 }
 .advantages__li::after {
   content: "";

@@ -4,18 +4,14 @@
 .swiper 
   width: 100%
   cursor: grab
-  overflow: hidden
   margin: 1rem 0
-  &-wrapper
-    backface-visibility: hidden
+
   &-button-next,
   &-button-prev
-    position: absolute
-    padding: 3rem
+    padding: 3.5rem
     background: white
     border-radius: 50%
     box-shadow:$max-box-shadow
-    
     &:hover
       transform: scale(1.1)
       opacity: 1
@@ -27,5 +23,4 @@
 
   &-slide 
     width: auto !important
-    height: auto
 
