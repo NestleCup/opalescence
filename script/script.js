@@ -51,7 +51,12 @@ document.addEventListener('submit', function (e) {
     errorName.style.display = 'none';
   }
 
-  if (phone === '' || !/^[\d\+]{7,15}$/.test(phone)) {
+  if (
+    phone === '' ||
+    !/^(\+7|8)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/.test(
+      phone
+    )
+  ) {
     errorTell.style.display = 'block';
     isValid = false;
   } else {
